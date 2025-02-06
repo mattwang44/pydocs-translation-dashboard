@@ -8,6 +8,10 @@ jobs:
     permissions:
       contents: write
     steps:
+      - name: Get Source and Target Branch
+        run: |
+          echo "Source Branch: ${{ github.event.pull_request.head.ref }}"
+          echo "Target Branch: ${{ github.event.pull_request.base.ref }}"
       - uses: actions/checkout@v4
         with:
           ref: gh-pages
