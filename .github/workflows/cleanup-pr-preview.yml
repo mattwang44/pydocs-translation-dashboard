@@ -8,7 +8,7 @@ jobs:
     permissions:
       contents: write
     steps:
-      - name: Get Source and Target Branch
+      - name: Get Source and Target Branch 2
         run: |
           echo "Source Branch: ${{ github.event.pull_request.head.ref }}"
           echo "Target Branch: ${{ github.event.pull_request.base.ref }}"
